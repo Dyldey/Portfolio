@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Portfolio - Dyldey Velldron Peady</title>
+  <link rel="shortcut icon" href="star.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      --pink: #0a66c2;
+      --olive-muted: #eef5fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f2ef;
+      color: #1d2226;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .topbar a:hover,
+    .topbar a.active {
+      background: #e8f3ff;
+      color: #004182;
+    }
+
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(135deg, #0a66c2, #004182);
+      color: white;
+      padding: 55px 20px 110px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.35;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      top: -180px;
+      right: -120px;
+    }
+
+    .hero-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-banner h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-banner p {
+      margin-top: 10px;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: -65px auto 40px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      border: 1px solid #dfe3e8;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+      overflow: hidden;
+    }
+
+    .profile-top {
+      height: 180px;
+      position: relative;
+      background:
+        linear-gradient(rgba(10,102,194,0.25), rgba(0,65,130,0.28)),
+        url('6BA4DE65-3E1F-4681-B1BF-49AB7AC94263.jpg') center center / cover no-repeat;
+    }
+
+    .profile-top::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.04), rgba(255,255,255,0.12));
+    }
+
+    .profile-main {
+      padding: 0 30px 30px;
+    }
+
+    .profile-image-wrap {
+      position: relative;
+      margin-top: -60px;
+      display: inline-block;
+    }
+
+    .profile-image-wrap img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--pink);
+      object-fit: cover;
+      background: var(--olive-muted);
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .verified-badge {
+      position: absolute;
+      right: 4px;
+      bottom: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0a66c2;
+      color: white;
+      border: 3px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    .profile-header {
+      margin-top: 14px;
+    }
+
+    .profile-header h2 {
+      margin: 0 0 8px;
+      font-size: 1.9rem;
+      color: #1d2226;
+    }
+
+    .headline {
+      font-size: 1rem;
+      color: #526a6e;
+      margin-bottom: 14px;
+    }
+
+    .mini-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .mini-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eef5fc;
+      color: #0a66c2;
+      border: 1px solid #d6e7f8;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #1d2226;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #0a66c2;
+      font-weight: bold;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 22px;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+      color: #1d2226;
+    }
+
+    .info-list i {
+      color: #0a66c2;
+      margin-right: 10px;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #0a66c2;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #004182;
+    }
+
+    .btn-secondary {
+      border: 1px solid #0a66c2;
+      color: #0a66c2;
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      background: #e8f3ff;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .social-icons a {
+      color: #0a66c2;
+      font-size: 1.4rem;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #004182;
+      transform: scale(1.08);
+    }
+
+    .audio-section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 20px;
+    }
+
+    .audio-section h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #0a66c2;
+      font-size: 1rem;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #d9d9d9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #5f6b75;
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 1.8rem;
+      }
+
+      .profile-main {
+        padding: 0 20px 25px;
+      }
+
+      .profile-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .action-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .mini-chip {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .profile-image-wrap img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="hero-banner">
+    <div class="hero-banner-content">
+      <h1><i class="fas fa-user-tie"></i> Dyldey Velldron Peady</h1>
+      <p>CID Officer • Public Service • Customer Service Background</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="profile-card">
+      <div class="profile-top"></div>
+
+      <div class="profile-main">
+        <div class="profile-image-wrap">
+          <img src="picture2.jpeg" alt="Dyldey Velldron Peady">
+          <span class="verified-badge"><i class="fas fa-check"></i></span>
+        </div>
+
+        <div class="profile-header">
+          <h2>Dyldey Velldron Peady</h2>
+          <div class="headline">CID Officer at PDRM</div>
+        </div>
+
+        <div class="mini-info">
+          <div class="mini-chip"><i class="fas fa-briefcase"></i> PDRM</div>
+          <div class="mini-chip"><i class="fas fa-user-shield"></i> CID Officer</div>
+          <div class="mini-chip"><i class="fas fa-headset"></i> Customer Service Background</div>
+        </div>
+
+        <p class="intro-text">
+          A dedicated professional with working experience in customer service and law enforcement.
+          Currently serving in the <span class="highlight">Criminal Investigation Department (CID)</span> under PDRM,
+          with previous experience in customer support at <span class="highlight">4Life Research Sdn. Bhd.</span>
+        </p>
+
+        <ul class="info-list">
+          <li><i class="fas fa-check-circle"></i> Customer Service &amp; Client Communication</li>
+          <li><i class="fas fa-check-circle"></i> Criminal Investigation Department (CID) Experience</li>
+          <li><i class="fas fa-check-circle"></i> Public Service, Discipline &amp; Professional Responsibility</li>
+        </ul>
+
+        <div class="action-row">
+          <a href="contact.html" class="btn btn-primary">Contact</a>
+          <a href="experience.html" class="btn btn-secondary">View Experience</a>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/dyldeyvelldron/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:2025952995@student.uitm.edu.my" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.facebook.com/dyldey" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+
+        <div class="audio-section">
+          <h3>Background Audio</h3>
+          <audio id="bg-audio" src="music.mp3" controls loop></audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright ©️FD2021 Last Update:MAY21 | Best Viewed: Google Chrome | Best Display: Any with max-width:600px</p>
+  </footer>
+
+</body>
+</html>

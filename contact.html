@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Dyldey Velldron Peady</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f2ef;
+      color: #1d2226;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .topbar a:hover,
+    .topbar a.active {
+      background: #e8f3ff;
+      color: #004182;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #0a66c2, #004182);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .page-header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 30px auto 40px;
+      padding: 0 20px;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dfe3e8;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 24px;
+      height: 100%;
+    }
+
+    .card-title {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #0a66c2;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      border: 4px solid #e8f3ff;
+    }
+
+    .detail-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .detail-table th,
+    .detail-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid #e8eaed;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+
+    .detail-table th {
+      width: 38%;
+      color: #526a6e;
+    }
+
+    .detail-table td {
+      color: #1d2226;
+      word-break: break-word;
+    }
+
+    .detail-table a {
+      color: #0a66c2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .detail-table a:hover {
+      text-decoration: underline;
+    }
+
+    .feedback-form label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 14px;
+      font-weight: bold;
+      color: #526a6e;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cfd8e3;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fff;
+      color: #1d2226;
+    }
+
+    .feedback-form input:focus,
+    .feedback-form textarea:focus {
+      outline: none;
+      border-color: #0a66c2;
+      box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.12);
+    }
+
+    .feedback-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 18px;
+      border: none;
+      background: #0a66c2;
+      color: white;
+      padding: 12px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #004182;
+    }
+
+    .video-box video {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #d9e2ec;
+      background: #000;
+      display: block;
+    }
+
+    .video-note {
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #d9d9d9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #5f6b75;
+    }
+
+    @media (max-width: 992px) {
+      .grid-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <header class="page-header">
+    <h1><i class="fas fa-address-card"></i> Contact Information</h1>
+    <p>Personal details, feedback form, and featured multimedia section</p>
+  </header>
+
+  <main class="container">
+    <section class="grid-layout">
+
+      <article class="card">
+        <h2 class="card-title">Personal Details</h2>
+        <img src="picture.jpeg" alt="Dyldey Velldron Peady" class="profile-pic" />
+
+        <table class="detail-table">
+          <tr><th>Title</th><td>Mr</td></tr>
+          <tr><th>Name</th><td>Dyldey Velldron Peady</td></tr>
+          <tr><th>Student ID</th><td>2025952995</td></tr>
+          <tr><th>Group</th><td>NCIMBSF3A</td></tr>
+          <tr><th>Course Code</th><td>IMS458</td></tr>
+          <tr><th>Course Name</th><td>Web Design and Web Development</td></tr>
+          <tr><th>Submission Date</th><td>31 May 2026</td></tr>
+          <tr>
+            <th>Published URL</th>
+            <td><a href="https://jehxrrr.infinityfree.me/" target="_blank" rel="noopener noreferrer">Visit Portfolio</a></td>
+          </tr>
+          <tr><th>Lecturer</th><td>Dr Farrah Diana</td></tr>
+        </table>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Send Feedback</h2>
+
+        <form class="feedback-form"
+          action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSfGmUOBjxty_93jpugvd6IidGkG_eHzvuCfRFWx-ZKXApn_ug/formResponse"
+          method="POST"
+          target="_blank">
+
+          <label for="fname">Your Name</label>
+          <input id="fname" name="entry.1595696815" placeholder="Enter your name" required />
+
+          <label for="email">Your Email</label>
+          <input id="email" name="entry.1895806114" type="email" placeholder="Enter your email" required />
+
+          <label for="fmsg">Feedback Message</label>
+          <textarea id="fmsg" name="entry.946230332" placeholder="Write your feedback here..." required></textarea>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Submit Feedback
+          </button>
+        </form>
+      </article>
+
+      <article class="card video-box">
+        <h2 class="card-title">Featured Criminal Investigation Department (CID) Video</h2>
+
+        <video autoplay muted loop playsinline>
+          <source src="video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="video-note">
+          This featured video highlights CID PDRM operations and reflects the law enforcement background presented in this portfolio.
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>COPYRIGHT ©️FD2021 Last Update:MAY21 | Best Viewed: Google Chrome | Best Display: Any with max-width:600px</p>
+  </footer>
+
+</body>
+</html>

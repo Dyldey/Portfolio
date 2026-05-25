@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - Dyldey Velldron Peady</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f2ef;
+      color: #1d2226;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .topbar a:hover,
+    .topbar a.active {
+      background: #e8f3ff;
+      color: #004182;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #0a66c2, #004182);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .page-header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto 40px;
+      padding: 0 20px;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border: 1px solid #dfe3e8;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .job-title {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+      color: #0a66c2;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f3ff;
+      color: #0a66c2;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border: 1px solid #cfe4ff;
+    }
+
+    .skill-badge i {
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #d9d9d9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #5f6b75;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .section-card {
+        padding: 20px;
+      }
+
+      .skill-badge {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="index.html">Home</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="page-header">
+    <h1><i class="fas fa-tools"></i> Skills</h1>
+    <p>Professional competencies developed through customer service and law enforcement experience</p>
+  </header>
+
+  <main class="container">
+
+    <section class="section-card">
+      <h2 class="job-title">Customer Service Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Customer Service</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Client Communication</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Problem Solving</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Complaint Handling</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Professional Etiquette</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Teamwork</div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2 class="job-title">Law Enforcement &amp; CID Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Investigation Support</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Critical Thinking</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Observation Skills</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Active Listening</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Conflict Management</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Professional Discipline</div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2 class="job-title">Personal Strengths</h2>
+      <div class="skills-grid">
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Responsibility</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Adaptability</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Integrity</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Time Management</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Decision Making</div>
+        <div class="skill-badge"><i class="fas fa-check-circle"></i> Communication Skills</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Copyright ©️FD2021 Last Update:MAY21 | Best Viewed: Google Chrome | Best Display: Any with max-width:600px</p>
+  </footer>
+
+</body>
+</html>

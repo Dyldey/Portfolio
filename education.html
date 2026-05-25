@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - Dyldey Velldron Peady</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f2ef;
+      color: #1d2226;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 14px 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .topbar a:hover,
+    .topbar a.active {
+      background: #e8f3ff;
+      color: #004182;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #0a66c2, #004182);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .page-header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .page-header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto 40px;
+      padding: 0 20px;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border: 1px solid #dfe3e8;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 22px;
+      font-size: 1.35rem;
+      color: #0a66c2;
+    }
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .item-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: #fff;
+      transition: 0.2s;
+    }
+
+    .item-card:hover {
+      box-shadow: 0 4px 14px rgba(10, 102, 194, 0.10);
+      border-color: #cfd8e3;
+    }
+
+    .item-logo {
+      width: 58px;
+      height: 58px;
+      min-width: 58px;
+      border-radius: 10px;
+      background: #eef3f8;
+      border: 1px solid #d9e2ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a66c2;
+      font-size: 1.4rem;
+    }
+
+    .item-content {
+      flex: 1;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 1.08rem;
+      color: #1d2226;
+    }
+
+    .item-org {
+      margin-top: 6px;
+      font-weight: bold;
+      color: #526a6e;
+    }
+
+    .item-meta {
+      margin-top: 6px;
+      color: #6b7280;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #d9d9d9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #5f6b75;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .item-card {
+        flex-direction: column;
+      }
+
+      .section-card {
+        padding: 20px;
+      }
+
+      .item-logo {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="page-header">
+    <h1><i class="fas fa-graduation-cap"></i> Education</h1>
+    <p>Academic background and study journey</p>
+  </header>
+
+  <main class="container">
+    <section class="section-card">
+      <h2 class="section-title">Academic Education</h2>
+
+      <div class="item-list">
+        <article class="item-card">
+          <div class="item-logo">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Degree in Computer Science</h3>
+            <div class="item-org">UiTM Puncak Perdana, Shah Alam, Selangor</div>
+            <div class="item-meta">
+              2025 – Present
+            </div>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-logo">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Diploma in Law Enforcement &amp; Administration</h3>
+            <div class="item-org">Saito University College, Petaling Jaya, Selangor</div>
+            <div class="item-meta">
+              2017 – 2019
+            </div>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-logo">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="item-content">
+            <h3 class="item-title">Sijil Pelajaran Malaysia (SPM)</h3>
+            <div class="item-org">SMK Nambayan Tambunan, Sabah</div>
+            <div class="item-meta">
+              2011 – 2016<br>
+              Result: Passed with credit
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright ©️FD2021 Last Update:MAY21 | Best Viewed: Google Chrome | Best Display: Any with max-width:600px</p>
+  </footer>
+
+</body>
+</html>
